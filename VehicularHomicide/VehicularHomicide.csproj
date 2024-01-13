@@ -40,6 +40,9 @@
     <Reference Include="BepInEx">
       <HintPath>E:\SteamLibrary\steamapps\common\Lethal Company\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="CommandLib">
+      <HintPath>E:\SteamLibrary\steamapps\common\Lethal Company\BepInEx\CommandLib\CommandLib.dll</HintPath>
+    </Reference>
     <Reference Include="Facepunch.Steamworks.Win64">
       <HintPath>E:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Facepunch.Steamworks.Win64.dll</HintPath>
     </Reference>
@@ -72,6 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patches\PlayerControllerBPatch.cs" />
+    <Compile Include="Patches\ShotgunItemPatch.cs" />
+    <Compile Include="Patches\TerminalPatch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

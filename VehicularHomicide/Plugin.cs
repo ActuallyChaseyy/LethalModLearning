@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using VehicularHomicide.Patches;
 
 namespace VehicularHomicide
@@ -23,6 +24,16 @@ namespace VehicularHomicide
         private static ModBaseReal Instance;
 
         internal ManualLogSource mls;
+
+        private static Terminal terminalInstance;
+
+        public static void RefreshAll()
+        {
+            if (terminalInstance == null)
+            {
+                return;
+            }
+        }
         void Awake()
         {
             if (Instance == null) { Instance = this; }
@@ -32,6 +43,15 @@ namespace VehicularHomicide
 
             harmony.PatchAll(typeof(ModBaseReal));
             harmony.PatchAll(typeof(PlayerControllerBPatch));
+            harmony.PatchAll(typeof(TerminalPatch));
+            harmony.PatchAll(typeof(ShotgunItemPatch));
+
+
+
+        }
+
+        void FixedUpdate()
+        {
 
         }
 

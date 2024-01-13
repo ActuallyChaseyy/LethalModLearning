@@ -24,7 +24,7 @@ namespace VehicularHomicide.Patches
             }
             else
             {
-                ___sprintMultiplier = 10f;
+                ___sprintMultiplier = 2f;
             }
         }
 
